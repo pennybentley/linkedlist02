@@ -23,7 +23,9 @@ end
 def reverse_list(list,previous=nil)
  
  if list
+    #set next to next node
     next_node = list.next_node
+    #set next node to previous (nil on pass 1)
     list.next_node = previous
     reverse_list(next_node, list)
   end
@@ -42,7 +44,7 @@ print_values(node3)
 #separator
 puts "---------"
 
-#reverse linked list via a stack and print it
+#reverse linked list via recursion and print it
 revlist = reverse_list(node3)
 
 print_values(node1)
